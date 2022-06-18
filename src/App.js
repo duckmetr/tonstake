@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import DepositSVG from './svg/dollar-sign-solid.svg'
+import WithdrawSVG from './svg/wallet-solid.svg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <p>TON Stake</p>
       </header>
+      <div className="wrap">
+        <div className="main">
+          <div className="balance">
+            <span>balance</span>
+            <div className="flex-row flex-center">
+              <p className="current">0</p>
+              <p className="assets ml-5">TON</p>
+            </div>
+            <div className="buttons flex-row flex-evenly">
+              <div className='flex-row align-center'>
+                <img src={DepositSVG} alt="Dollar Logo" />
+                <p className='ml-5'>Deposit</p>
+              </div>
+              <div className='flex-row align-center'>
+                <img src={WithdrawSVG} alt="Withdraw Logo" />
+                <p className='ml-5'>Withdraw</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
