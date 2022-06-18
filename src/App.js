@@ -4,9 +4,9 @@ import WithdrawSVG from './svg/wallet-solid.svg'
 function App() {
   return (
     <div>
-      <header>
+      {/* <header>
         <p>TON Stake</p>
-      </header>
+      </header> */}
       <div className="wrap">
         <div className="main">
           <div className="balance">
@@ -18,11 +18,11 @@ function App() {
             <div className="buttons flex-row flex-evenly">
               <div className='flex-row align-center'>
                 <img src={DepositSVG} alt="Dollar Logo" />
-                <p className='ml-5'>Deposit</p>
+                <p className='ml-10'>Deposit</p>
               </div>
               <div className='flex-row align-center'>
                 <img src={WithdrawSVG} alt="Withdraw Logo" />
-                <p className='ml-5'>Withdraw</p>
+                <p className='ml-10'>Withdraw</p>
               </div>
             </div>
           </div>
