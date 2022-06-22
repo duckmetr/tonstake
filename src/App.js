@@ -1,37 +1,46 @@
 import { useEffect } from 'react'
-import DepositSVG from './svg/dollar-sign-solid.svg'
-import WithdrawSVG from './svg/wallet-solid.svg'
+// import DepositSVG from './svg/dollar-sign-solid.svg'
+// import WithdrawSVG from './svg/wallet-solid.svg'
+import DepositPNG from './png/download.png'
+import WithdrawPNG from './png/file-upload.png'
+import SendPNG from './png/right-arrow.png'
 
 function App() {
   useEffect(() => {
     console.log(window.Telegram.WebApp)
   })
 
-
   return (
     <div>
-      {/* <header>
-        <p>TON Stake</p>
-      </header> */}
       <div className="wrap">
         <div className="main">
           <div className="balance">
-            <span>balance</span>
+            <span className='span'>Total balance</span>
             <div className="flex-row flex-center">
               <p className="current">0</p>
               <p className="assets ml-5">TON</p>
             </div>
-            <div className="buttons flex-row flex-evenly">
-              <div className='flex-row align-center'>
-                <img src={DepositSVG} alt="Dollar Logo" />
-                <p className='ml-10'>Deposit</p>
+          </div>
+          <div className="buttons flex-row flex-evenly">
+              <div className='align-center'>
+                <div className="img">
+                  <img src={DepositPNG} alt="Deposit Logo" />
+                </div>
+                <p>Deposit</p>
               </div>
-              <div className='flex-row align-center'>
-                <img src={WithdrawSVG} alt="Withdraw Logo" />
-                <p className='ml-10'>Withdraw</p>
+              <div className='align-center'>
+                <div className="img">
+                  <img src={WithdrawPNG} alt="Withdraw Logo" />
+                </div>
+                <p>Withdraw</p>
+              </div>
+              <div className='align-center'>
+                <div className="img">
+                  <img src={SendPNG} alt="Send Logo" />
+                </div>
+                <p>Send</p>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
