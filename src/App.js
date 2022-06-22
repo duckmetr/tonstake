@@ -21,7 +21,7 @@ function App() {
               <p className="assets ml-5">TON</p>
             </div>
           </div>
-          <div className="buttons flex-row flex-evenly">
+          <div className="buttons flex-row flex-around">
               <div className='align-center'>
                 <div className="img">
                   <img src={DepositPNG} alt="Deposit Logo" />
