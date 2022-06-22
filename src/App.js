@@ -15,8 +15,8 @@ function App() {
       <div className="wrap">
         <div className="main">
           <div className="balance">
-            <span className='span'>Total balance</span>
-            <div className="flex-row flex-center">
+            <p className='span p5'>Total balance</p>
+            <div className="flex-row flex-center p10">
               <p className="current">0</p>
               <p className="assets ml-5">TON</p>
             </div>
