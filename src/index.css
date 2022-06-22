@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EBEDF0;
+  background-color: var(--tg-theme-bg-color);
 }
 
 code {
@@ -20,7 +20,6 @@ header {
   font-size: 18px;
   font-weight: 800;
   border-bottom: 1px solid #ddd;
-  /* padding: 0 600px; */
 }
 
 .ml-5 {

@@ -1,7 +1,13 @@
+import { useEffect } from 'react'
 import DepositSVG from './svg/dollar-sign-solid.svg'
 import WithdrawSVG from './svg/wallet-solid.svg'
 
 function App() {
+  useEffect(() => {
+    console.log(window.Telegram.WebApp)
+  })
+
+
   return (
     <div>
       {/* <header>
