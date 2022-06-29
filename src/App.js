@@ -1,9 +1,5 @@
 import { useEffect } from 'react'
-// import DepositSVG from './svg/dollar-sign-solid.svg'
-// import WithdrawSVG from './svg/wallet-solid.svg'
-import DepositPNG from './png/download.png'
-import WithdrawPNG from './png/file-upload.png'
-import SendPNG from './png/right-arrow.png'
+import { Card, Form, FormControl, InputGroup, Button } from 'react-bootstrap'
 
 function App() {
   useEffect(() => {
@@ -11,39 +7,40 @@ function App() {
   })
 
   return (
-    <div>
-      <div className="wrap">
-        <div className="main">
-          <div className="balance">
-            <p className='span p5'>Total balance</p>
-            <div className="flex-row flex-center p10">
-              <p className="current">0</p>
-              <p className="assets ml-5">TON</p>
-            </div>
-          </div>
-          <div className="buttons flex-row flex-around">
-              <div className='align-center'>
-                <div className="img">
-                  <img src={DepositPNG} alt="Deposit Logo" />
-                </div>
-                <p>Deposit</p>
-              </div>
-              <div className='align-center'>
-                <div className="img">
-                  <img src={WithdrawPNG} alt="Withdraw Logo" />
-                </div>
-                <p>Withdraw</p>
-              </div>
-              <div className='align-center'>
-                <div className="img">
-                  <img src={SendPNG} alt="Send Logo" />
-                </div>
-                <p>Send</p>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
+    <>
+    <Card>
+      <Card.Body>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>From</Form.Label>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">UAH</InputGroup.Text>
+              <FormControl
+                placeholder="50 - 150 000"
+                aria-label="amount"
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>To</Form.Label>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">TON</InputGroup.Text>
+              <FormControl
+                placeholder="0.000"
+                aria-label="amount"
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+          </Form.Group>
+          <Button variant="dark" type="submit">
+            Exchange
+          </Button>
+        </Form>
+      </Card.Body>
+    </Card>
+    </>
   )
 }
 
